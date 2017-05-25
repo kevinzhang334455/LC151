@@ -2,14 +2,6 @@
 #include <iostream>
 using std::vector;
 
-void print_vec(const std::vector<int>& vec)
-{
-  for (const auto& num : vec)
-    std::cout << num << ' ';
-
-  std::cout << std::endl;
-}
-
 class Solution {
 public:
   int firstMissingPositive(vector<int>& nums)
@@ -21,7 +13,6 @@ public:
         && nums[i] >= 1 && nums[i] <= nums.size())
       {
         std::swap(nums[i], nums[nums[i] - 1]);
-        print_vec(nums);
       }
     }
 
