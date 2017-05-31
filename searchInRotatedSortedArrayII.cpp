@@ -7,7 +7,7 @@ public:
   bool search(const vector<int>& nums, int target) {
     if (nums.empty()) return false;
 
-    int low = 0, high = nums.size() - 1, mid(0);
+    int low = 0, high = nums.size() - 1;
     while (low <= high)
     {
       int mid = low + (high - low) / 2;
